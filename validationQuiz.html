@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>form validation</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+</head>
+</head>
+<body>
+
+<form class="needs-validation" novalidate>
+   <div class="card px-5 py-5">
+   <p>LOGIN</p>
+   <span class="circle"><i class="fa fa-check"></i></span>
+
+  <div class="col-md-4">
+    <label for="validationDefault01" class="form-label">Ussername</label>
+    <input id= "user" type="text" class="form-control" placeholder="Ussername" >
+  <div class="invalid-feedback">
+		Field Ini Harus Di isi
+  </div>
+  
+  </div>
+  <div class="col-md-4">
+    <label for="validationDefault02" class="form-label">Password</label>
+    <input id= "pass" type="text" class="form-control" placeholder="Password" required>
+  <div class="invalid-feedback">
+		Field Ini Harus Di isi
+  </div>
+  </div>
+  
+  <div class="col-md-4">
+    <label for="validationDefault03" class="form-label">Ulangi Password</label>
+    <input id= "password" type="text" class="form-control" placeholder="Ulangi password" required>
+  <div class="invalid-feedback">
+		Field Ini Harus Di isi
+  </div>
+  </div>
+  </div>
+  <br>
+  <br>
+  <div class="card px-5 py-5">
+  <p>IDENTITAS</p>
+  
+   <div class="col-md-4">
+    <label for="validationDefault04" class="form-label">Nama Sesuai Identitas</label>
+    <input id= "identitas" type="text" class="form-control"  placeholder="Nama" required>
+  <div class="invalid-feedback">
+		Nama Sesuai Identitas Harus Di isi
+  </div>
+  </div>
+  
+  <div class="col-md-4">
+    <label for="validationDefault05" class="form-label">Nama Sesuai Ijazah</label>
+    <input id= "ijazah" type="text" class="form-control"  placeholder="Nama" required>
+  <div class="invalid-feedback">
+		Nama Sesuai Ijazah Harus Di isi
+  </div>
+  </div>
+  
+  <div class="col-md-4">
+  <label for="validationCustom06" class="form-label">Jenis Identitas</label><br>
+    <select id="validationCustom06" class="form-select"  required>
+        <option selected disabled value=""> --PILIH-- </option>
+        <option value="ijazah"> Ijazah </option>
+        <option value="ktp"> KTP </option>
+        </select>
+   <div class="invalid-feedback">
+		Anda Belum Memilih Identitas
+   </div>
+   </div>
+   
+   <div class="col-md-4">
+    <label for="validationDefault07" class="form-label">Nomor Identitas</label>
+    <input id= "noiden" type="text" class="form-control" placeholder="No Identitas" required>
+   <div class="invalid-feedback">
+		Field Harus Di isi
+   </div>
+  </div>
+  
+  <div class="col-md-4">
+  <label for="validationCustom08" class="form-label">Kewarganegaraan</label><br>
+  <select id="validationCustom08" class="form-select"  required>
+        <option selected disabled value=""> --PILIH-- </option>
+        <option  value="ijazah"> Indonesia </option>
+        <option  value="ktp"> Amerika </option>
+        </select>
+        
+     <div class="invalid-feedback">
+		Field ini harus diisi
+  </div>
+   </div>
+   <br>
+   <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+  </div>
+    
+  </form>      
+  </body>
+  
+  <script type="text/javascript">
+
+  (function () {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms)
+      .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+
+          form.classList.add('was-validated')
+        }, true)
+      })
+  })()
+  </script>
+</html>

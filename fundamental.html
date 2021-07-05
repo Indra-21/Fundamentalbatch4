@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>quiz</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+   
+   <h1 align="center" > LOGIN </h1>
+   <div class="card px-5 py-5">
+   <span class="circle"><i class="fa fa-check"></i></span>
+	<form action="dashboard.html" method="POST">
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label" >Email
+				address</label> <input id="emaiil" type="email" class="form-control"
+				id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email Address">
+ <div>
+		<p id="vemail" style="color: red; display: none;">Mohon isi E-mail kamu</p>
+		</div>
+		</div>
+		
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Password</label>
+			<input type="password" class="form-control"
+				id="exampleInputPassword1" placeholder="Enter password">
+		</div>
+		<div class="mb-3 form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Remember Password</label>
+		</div>
+	    <div align="right">
+		<button type="submit" class="btn btn-primary" onclick="validasi()" >Login</button>
+		</div>
+		 <a href="test.html">Forgot Password?</a>
+	</form>
+</div>
+
+</body>
+
+<script type="text/javascript">
+function validasi(){
+var emaiil = document.getElementById("emaiil");
+var vemail = document.getElementById("vemail");
+
+if (emaiil.value == ""){
+	vemail.style.display = "block";
+}else{
+	vemail.style.display = "none";
+}
+}
+</script>
+</html>
+

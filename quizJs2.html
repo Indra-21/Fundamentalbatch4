@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>quizJs</title>
+</head>
+<body>
+
+<h4>check buku best seller</h4>
+	
+	<input type="button" onclick="tempat();" value="Toko Buku" />
+
+</body>
+
+<script type="text/javascript">
+function tempat(){
+	var tokoBuku = {
+			judul : "Spring in Action",
+			harga : 360979,
+			penulis : "Craig Walls"
+	}
+	var item;
+	for (item in tokoBuku) {
+		document.write(tokoBuku[item]);
+		document.write("<br>");
+		document.write("<br>");
+		
+	}
+	document.write("Buku ini memang sangat laku di pasaran dan mempunyai manfaat yang luar biasa.");
+}
+</script>
+</html>
